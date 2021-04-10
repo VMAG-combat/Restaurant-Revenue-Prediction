@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>Restaurent Form</title>
+        <link href="{% static 'style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="form">
+            <div class="heading">
+                <h2 style="text-align: center;">RESTAURENT REVENUE PREDICTION FORM</h2>
+            </div>
+            <form method="post" action="">
+                {% csrf_token %}
+                <table cellspacing="10px" cellpadding="15px">
+                <tr>
+                        <td>
+                            <div class="citygrp">City Group</div>
+                        </td>
+                        <td>
+                            <div class="radio-btn">
+                                <label class="container">
+                                    <input type="radio" name="citygrp" value="Big Cities" checked>Big Cities
+                                    <span class="checkmark"></span>
+                                </label>
+                                <br>
+                                <label class="container">
+                                    <input type="radio" name="citygrp" value="Other">Other
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="type">Type</div>
+                    </td>
+                    <td>
+                        <div class="radio-btn">
+                            <label class="container">
+                                <input type="radio" name="type" value="IL" checked>IL
+                                <span class="checkmark"></span>
+                            </label>
+                            <br>
+                            <label class="container">
+                                <input type="radio" name="type" value="FC">FC
+                                <span class="checkmark"></span> 
+                            </label>
+                            <label class="container">
+                                <input type="radio" name="type" value="DT">DT
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="date">Start Date</div>
+                    </td>
+                    <td>
+                        <div class="per1">
+                            <input type="date" class="per" name="date" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                        <td>
+                            <div class="p1">P1</div>
+                        </td>
+                        <td>
+                            <div class="p">
+                                <input type="number" class="per" name="p1" min="0" max="100" step="1" required>
+                            </div>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p2">P2</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p2" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p3">P3</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p3" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P4</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p4" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P5</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p5" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P6</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p6" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P7</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p7" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P8</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p8" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P9</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p9" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P10</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p10" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P11</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p11" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P12</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p12" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P13</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p13" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P14</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p14" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P15</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p15" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p16">P16</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p16" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P17</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p17" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P18</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p18" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P19</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p19" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P20</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p20" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P21</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p21" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P22</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p22" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P23</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p23" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P24</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p24" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P25</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p25" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P26</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p26" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P27</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p27" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P28</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p28" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P29</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p29" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P30</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p30" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P31</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p31" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P32</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p32" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P33</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p33" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P34</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p34" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P35</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p35" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P36</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p36" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="p1">P37</div>
+                    </td>
+                    <td>
+                        <div class="p">
+                            <input type="number" class="per" name="p37" min="0" max="100" step="1" required>
+                        </div>
+                    </td>
+                </tr>
+                
+            </table>
+        <br>
+        <div>
+            <button class="submitbtn" type="submit">Submit</button>
+        </div>
+        <br>
+        <br>
+        <br>
+    </form> 
+        </div>
+    </body>
+</html>
