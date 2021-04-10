@@ -1,1 +1,1 @@
-web: gunicorn placement.placement.wsgi --log-file -
+web: gunicorn restaurent.wsgi --log-file -
