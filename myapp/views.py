@@ -9,9 +9,6 @@ import pickle as pickle
 import joblib as joblib
 
 path1 = 'myapp/models/model.pkl'
-path2 = 'myapp/models/rfr.pkl'
-
-
 
 columns = ['citygrp','type' ,'date' , 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10',
  'p11', 'p12', 'p13', 'p14', 'p15', 'p16', 'p17', 'p18', 'p19', 'p20', 'p21', 'p22', 'p23', 'p24', 'p25',
@@ -25,11 +22,16 @@ def home(requests):
         for i in range(len(columns)):
               temp.append(requests.POST[columns[i]])
         print(temp)
-        model_list=[]
 
         model = joblib.load(path1) 
         enc = model['encoder']
-        pred = model['predictor']
+        ridge_model = model['ridge']
+        lgb_model= model['lgb']
+        knn_model= model['knn']
+        lasso_model= model['lasso']
+        el_model= model['el']
+        xgb_model = model['xgb']
+        
         temp = pd.DataFrame([temp],columns=columns)
         a = pd.DataFrame(enc.transform(temp[['citygrp','type']]).toarray())
         temp1 = pd.to_datetime(temp["date"])
@@ -39,8 +41,20 @@ def home(requests):
         temp.drop(['citygrp','type','date'],inplace=True,axis=1)
         temp = a.join(temp)
         x = temp.iloc[0]
-        p123 = pred.predict([x])
+        ridge = ridge_model.predict([x])
+        lgb = lgb_model.predict([x])
+        knn = knn_model.predict([x])
+        lasso = lasso_model.predict([x])
+        el = el_model.predict([x])
+        xgb = xgb_model.predict([x])
         
-        params={'revenue' : np.expm1(p123)[0]}
+        params={
+            'ridge' : np.expm1(ridge)[0],
+            'lgb' : np.expm1(lgb)[0],
+            'knn' : np.expm1(knn)[0],
+            'el' : np.expm1(el)[0],
+            'xgb' : np.expm1(xgb)[0],
+            'lasso' : np.expm1(lasso)[0],
+            }
 
         return render(requests, 'result.html', params)
