@@ -14,3 +14,4 @@ scipy==1.5.1
 six==1.15.0
 sqlparse==0.3.1
 whitenoise==5.1.0
+lightgbm
