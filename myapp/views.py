@@ -46,7 +46,7 @@ def home(requests):
         knn = knn_model.predict([x])
         lasso = lasso_model.predict([x])
         el = el_model.predict([x])
-        xgb = xgb_model.predict([x])
+        xgb = xgb_model.predict(np.array([x]))
         
         params={
             'ridge' : np.expm1(ridge)[0],
